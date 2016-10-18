@@ -1,0 +1,24 @@
+*.class
+*.classpath
+*.project
+*.settings
+/target
+/bin
+*/target
+*.iml
+rebel.xml
+
+#Package Files#
+*.jar
+*.war
+*.ear
+*.idea
+/.idea
+.DS_Store
+.git
+/logs
+node_modules
+*.less
+gulpfile.js
+package.json
+sprite.css
