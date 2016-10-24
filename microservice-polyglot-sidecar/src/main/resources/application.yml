@@ -1,0 +1,9 @@
+server:
+  port: 5678
+spring:
+  application:
+    name: microservice-polyglot-sidecar
+
+sidecar:
+  port: 8000
+  health-uri: http://localhost:8000/health.json

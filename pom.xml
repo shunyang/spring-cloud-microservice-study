@@ -23,6 +23,8 @@
         <module>microservice-config-server-eureka</module>
         <module>microservice-config-client-eureka</module>
         <module>microservice-api-gateway</module>
+        <module>microservice-polyglot-sidecar</module>
+        <module>microservice-discovery-zookeeper</module>
     </modules>
 
 
