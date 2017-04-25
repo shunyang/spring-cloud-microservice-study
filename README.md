@@ -1,6 +1,4 @@
 # 项目简介
-本项目参考 http://git.oschina.net/itmuch/spring-cloud-book,并进行了一些修改
-
 内容主要包含：
 
 | 微服务角色                 | 对应的技术选型                              |
@@ -11,6 +9,7 @@
 | 熔断器                   | Hystrix，包括Hystrix Dashboard以及Turbine |
 | 配置服务                  | Spring Cloud Config Server           |
 | API Gateway           | Zuul                                 |
+| admin 管理后台                | spring boot admin|
 
 
 
@@ -49,4 +48,5 @@
 | microservice-hystrix-turbine             | 8031 | turbine                | /turbine.stream |
 | microservice-provider-user               | 8000 | 服务提供者                  | /1              |
 |                                          |      |                        |                 |
+| microservice-admin                       | 11007 | 微服务管理后台                 | /1              |
 

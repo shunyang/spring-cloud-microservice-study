@@ -1,0 +1,44 @@
+server:
+  port: 11007
+
+info:
+  info: "@pom.version@"
+
+logging:
+  file: "logs/microservice-admin.log"
+
+management:
+  context-path: "/actuator"
+  security:
+    enabled: false
+
+spring:
+  application:
+    name:  microservice-admin
+  boot:
+    admin:
+      url: http://localhost:11007
+      username: "${security.user.name}"       #These two are needed so that the client
+      password: "${security.user.password}"   #can register at the protected server api
+      client:
+        metadata:
+          user.name: "${security.user.name}"          #These two are needed so that the server
+          user.password:  "${security.user.password}" #can access the proteceted client endpoints
+      hazelcast:
+          enabled: true
+          application-store: msa-admin-application-store
+          event-store: msa-admin-admin-event-store
+
+security:
+  user:
+    name: admin
+    password: admin
+
+
+eureka:
+  instance:
+    leaseRenewalIntervalInSeconds: 10
+  client:
+    registryFetchIntervalSeconds: 5
+    serviceUrl:
+      defaultZone:  http://discovery:8761/eureka/    # 指定注册中心的地址
