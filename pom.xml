@@ -33,6 +33,11 @@
         <module>microservice-api-gateway</module>
         <module>microservice-polyglot-sidebar</module>
         <module>microservice-admin</module>
+        <module>microservice-zipkin-server</module>
+        <module>microservice-zipkin-client</module>
+        <module>microservice-zipkin-stream-server</module>
+        <module>microservice-zipkin-stream-client</module>
+        <module>microservice-zipkin-stream-client-backend</module>
     </modules>
 
     <properties>

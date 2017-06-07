@@ -1,0 +1,8 @@
+server:
+  port: 11010
+
+spring:
+  application:
+    name: microservice-zipkin-client-backend
+  zipkin:
+    base-url: http://localhost:11008

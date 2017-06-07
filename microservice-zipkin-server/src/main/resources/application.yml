@@ -1,0 +1,6 @@
+server:
+  port: 11008
+spring:
+  application:
+    name : microservice-zipkin-server
+

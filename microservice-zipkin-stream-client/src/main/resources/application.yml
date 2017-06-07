@@ -1,0 +1,13 @@
+server:
+  port: 11021
+
+spring:
+  application:
+    name: microservice-zipkin-stream-client
+
+ #rabbitmq配置
+  rabbitmq:
+    host: 127.0.0.1
+    port : 5672
+    username: guest
+    password: guest
