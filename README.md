@@ -9,7 +9,7 @@
 | 熔断器                   | Hystrix，包括Hystrix Dashboard以及Turbine |
 | 配置服务                  | Spring Cloud Config Server           |
 | API Gateway           | Zuul                                 |
-| admin 管理后台                | spring boot admin|
+| admin 管理后台          | spring boot admin|
 | 服务追踪                |zipkin|
 
 
@@ -47,13 +47,15 @@
 | microservice-hystrix-dashboard           | 8030 | hystrix监控              | /hystrix.stream |
 | microservice-hystrix-turbine             | 8031 | turbine                | /turbine.stream |
 | microservice-provider-user               | 8000 | 服务提供者                  | /1              |
-|                                          |      |                        |                 |
-| microservice-admin                       | 11007 | 微服务管理后台                 | /1              |
-| microservice-zipkin-server               | 11008 | 跟踪服务服务端                 | /1              |
-| microservice-zipkin-client               | 11009 | 跟踪服务客户端                | /1              |
-| microservice-zipkin-client-backend       | 11010 | 跟踪服务客户端被调用方               | /1              |
-| microservice-zipkin-stream-server        | 11020 | 以mq形式传递的跟踪服务服务端                | /1              |
-| microservice-zipkin-stream-client        | 11021 | 以mq形式传递的跟踪服务客户端                 | /1              |
-| microservice-zipkin-stream-client-backend  | 11022 | 以mq形式传递的跟踪服务客户端被调用方                  | /1              |
+| microservice-admin                       | 11007 | 微服务管理后台                 | http://localhost:11007            |
+| microservice-zipkin-server               | 11008 | 跟踪服务服务端                 |  http://localhost:11008             |
+| microservice-zipkin-client               | 11009 | 跟踪服务客户端                | http://localhost:11009/call/1            |
+| microservice-zipkin-client-backend       | 11010 | 跟踪服务客户端被调用方               | /            |
+| microservice-zipkin-stream-server        | 11020 | 以mq形式传递的跟踪服务服务端                | http://localhost:11020               |
+| microservice-zipkin-stream-client        | 11021 | 以mq形式传递的跟踪服务客户端                 | http://localhost:11009/call/1            |
+| microservice-zipkin-stream-client-backend  | 11022 | 以mq形式传递的跟踪服务客户端被调用方                  | /             |
 
 
+## 后记
+本文参考：http://git.oschina.net/didispace/SpringCloudBook
+做了admin以及zipkin等方面的扩展
