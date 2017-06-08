@@ -10,7 +10,7 @@
 | 配置服务                  | Spring Cloud Config Server           |
 | API Gateway           | Zuul                                 |
 | admin 管理后台                | spring boot admin|
-
+| 服务追踪                |zipkin|
 
 
 # 准备
@@ -49,4 +49,11 @@
 | microservice-provider-user               | 8000 | 服务提供者                  | /1              |
 |                                          |      |                        |                 |
 | microservice-admin                       | 11007 | 微服务管理后台                 | /1              |
+| microservice-zipkin-server               | 11008 | 跟踪服务服务端                 | /1              |
+| microservice-zipkin-client               | 11009 | 跟踪服务客户端                | /1              |
+| microservice-zipkin-client-backend       | 11010 | 跟踪服务客户端被调用方               | /1              |
+| microservice-zipkin-stream-server        | 11020 | 以mq形式传递的跟踪服务服务端                | /1              |
+| microservice-zipkin-stream-client        | 11021 | 以mq形式传递的跟踪服务客户端                 | /1              |
+| microservice-zipkin-stream-client-backend  | 11022 | 以mq形式传递的跟踪服务客户端被调用方                  | /1              |
+
 
