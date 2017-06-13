@@ -10,6 +10,18 @@
         <version>1.5.2.RELEASE</version>
     </parent>
 
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>Dalston.RELEASE</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.yangyang.cloud</groupId>
@@ -38,6 +50,9 @@
         <module>microservice-zipkin-stream-server</module>
         <module>microservice-zipkin-stream-client</module>
         <module>microservice-zipkin-stream-client-backend</module>
+        <module>microservice-zipkin-stream-server-es</module>
+        <module>microservice-zipkin-stream-client-es</module>
+        <module>microservice-zipkin-stream-client-backend-es</module>
     </modules>
 
     <properties>
@@ -49,17 +64,6 @@
 
 
 
-    <dependencyManagement>
-        <dependencies>
-            <dependency>
-                <groupId>org.springframework.cloud</groupId>
-                <artifactId>spring-cloud-dependencies</artifactId>
-                <version>${spring-cloud.version}</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-        </dependencies>
-    </dependencyManagement>
 
 
     <build>
