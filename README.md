@@ -10,7 +10,7 @@
 | 配置服务                  | Spring Cloud Config Server           |
 | API Gateway           | Zuul                                 |
 | admin 管理后台          | spring boot admin|
-| 服务追踪                |zipkin|
+| 服务追踪                |zipkin，spring cloud sleuth,rabbitmq，elasticsearch|
 
 
 # 准备
@@ -52,9 +52,14 @@
 | microservice-zipkin-client               | 11009 | 跟踪服务客户端                | http://localhost:11009/call/1            |
 | microservice-zipkin-client-backend       | 11010 | 跟踪服务客户端被调用方               | /            |
 | microservice-zipkin-stream-server        | 11020 | 以mq形式传递的跟踪服务服务端                | http://localhost:11020               |
-| microservice-zipkin-stream-client        | 11021 | 以mq形式传递的跟踪服务客户端                 | http://localhost:11009/call/1            |
+| microservice-zipkin-stream-client        | 11021 | 以mq形式传递的跟踪服务客户端                 | http://localhost:11021/call/1            |
 | microservice-zipkin-stream-client-backend  | 11022 | 以mq形式传递的跟踪服务客户端被调用方                  | /             |
+| microservice-zipkin-stream-server-es        | 11030 | 以mq形式传递,es存储的跟踪服务服务端                | http://localhost:11030               |
+| microservice-zipkin-stream-client-es        | 11031 | 以mq形式传递,es存储的跟踪服务客户端                 | http://localhost:11031/call/1            |
+| microservice-zipkin-stream-client-backend-es  | 11032 | 以mq形式传递,es存储的跟踪服务客户端被调用方                  | /   
 
+## 相关文档：
+简书：http://www.jianshu.com/u/331c21a4899d
 
 ## 后记
 本文参考：http://git.oschina.net/didispace/SpringCloudBook
