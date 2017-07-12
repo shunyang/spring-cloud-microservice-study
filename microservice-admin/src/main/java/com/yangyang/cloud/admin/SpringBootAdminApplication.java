@@ -8,6 +8,7 @@ import de.codecentric.boot.admin.notify.filter.FilteringNotifier;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
+import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
@@ -24,8 +25,9 @@ import java.util.concurrent.TimeUnit;
 @EnableEurekaClient
 @SpringBootApplication
 public class SpringBootAdminApplication {
+    public static ApplicationContext APPLICATION_CONTEXT;
     public static void main(String[] args) {
-        SpringApplication.run(SpringBootAdminApplication.class, args);
+        APPLICATION_CONTEXT = SpringApplication.run(SpringBootAdminApplication.class, args);
     }
 
     // tag::configuration-spring-security[]
