@@ -4,7 +4,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 /**
- * Created by zhengjh on 2017/7/6.
+ * 调用关系展示bean
  */
 public class InterfaceInfo {
     private String name;

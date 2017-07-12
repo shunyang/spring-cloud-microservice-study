@@ -18,7 +18,7 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 /**
- * Created by zhengjh on 2017/7/6.
+ * 每隔30s调度一次，获取服务的消费者
  */
 @Component
 @Configurable

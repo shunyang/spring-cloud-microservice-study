@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.*;
 
 /**
- * Created by zhengjh on 2017/7/6.
+ * 展示调用关系 http://localhost:11007/feigns
  */
 @RestController
 public class FeignController {

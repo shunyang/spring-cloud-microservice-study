@@ -17,7 +17,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by zhengjh on 2017/7/6.
+ * 通过 "http://" + ip + ":" + port + "/beans" 方式来找到提供的服务
  */
 @Component
 @Scope("prototype")

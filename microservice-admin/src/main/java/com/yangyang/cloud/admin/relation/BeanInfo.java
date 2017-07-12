@@ -3,7 +3,7 @@ package com.yangyang.cloud.admin.relation;
 import java.util.List;
 
 /**
- * Created by zhengjh on 2017/7/6.
+ * 提供方的bean结构
  */
 public class BeanInfo {
     private String bean;
