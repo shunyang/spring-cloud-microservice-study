@@ -1,0 +1,8 @@
+management:
+  security:
+    enabled: false
+spring:
+  application:
+    name: microservice-prometheus
+server:
+  port: 8888

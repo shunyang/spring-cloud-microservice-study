@@ -15,7 +15,7 @@
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-dependencies</artifactId>
-                <version>Dalston.RELEASE</version>
+                <version>Dalston.SR1</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
@@ -47,23 +47,20 @@
         <module>microservice-admin</module>
         <module>microservice-zipkin-server</module>
         <module>microservice-zipkin-client</module>
+        <module>microservice-zipkin-client-backend</module>
         <module>microservice-zipkin-stream-server</module>
         <module>microservice-zipkin-stream-client</module>
         <module>microservice-zipkin-stream-client-backend</module>
         <module>microservice-zipkin-stream-server-es</module>
         <module>microservice-zipkin-stream-client-es</module>
         <module>microservice-zipkin-stream-client-backend-es</module>
+        <module>microservice-prometheus</module>
     </modules>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <java.version>1.8</java.version>
-        <spring-boot.version>1.5.2.RELEASE</spring-boot.version>
-        <spring-cloud.version>Dalston.RELEASE</spring-cloud.version>
     </properties>
-
-
-
 
 
     <build>

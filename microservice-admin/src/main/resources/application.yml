@@ -8,7 +8,6 @@ logging:
   file: "logs/microservice-admin.log"
 
 management:
-  context-path: "/actuator"
   security:
     enabled: false
 

@@ -4,6 +4,7 @@ import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.JavaType;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.netflix.appinfo.InstanceInfo;
+import com.yangyang.cloud.admin.SpringBootAdminApplication;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -50,9 +51,20 @@ public class FeignDiscovery implements Runnable {
             if (port == null) {
                 port = String.valueOf(instanceInfo.getPort());
             }
+            //如果是admin管理系统，直接过滤掉
+            int adminPort = SpringBootAdminApplication.applicationContext.getEmbeddedServletContainer().getPort();
+            if (port.equals(Integer.valueOf(adminPort).toString())){
+                return;
+            }
             String beansUrl = "http://" + ip + ":" + port + "/beans";
+            String contextPath = instanceInfo.getMetadata().get("context-path");
+            if (contextPath != null && contextPath!= ""){
+                if (!contextPath.startsWith("/")){
+                    contextPath= "/"+contextPath;
+                }
+                beansUrl = "http://" + ip + ":" + port + contextPath+"/beans";
+            }
             Log.info("get feign beans from {} url={}", instanceInfo.getInstanceId(), beansUrl);
-
             ResponseEntity<String> responseEntity = restTemplate.getForEntity(beansUrl, String.class);
             String body = responseEntity.getBody();
             Log.debug("contexts: " + body);

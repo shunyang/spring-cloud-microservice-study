@@ -40,11 +40,9 @@ public class FeignSchedule {
     @Scheduled(fixedRate = 30_000)
     public void run() {
         long currentRunTimestamp = System.currentTimeMillis();
-
         List<RelateInstance> dirtyRelateInstanceList = loadChangeInstances();
-
         for (RelateInstance relateInstanceInfo : dirtyRelateInstanceList) {
-            FeignDiscovery feignDiscovery = SpringBootAdminApplication.APPLICATION_CONTEXT.getBean(FeignDiscovery.class);
+            FeignDiscovery feignDiscovery = SpringBootAdminApplication.applicationContext.getBean(FeignDiscovery.class);
             feignDiscovery.setRelateInstance(relateInstanceInfo);
             Log.info("found dirty instance: {}", relateInstanceInfo.getInstanceInfo().getInstanceId());
             cachedThreadPool.submit(feignDiscovery);
